@@ -1,6 +1,6 @@
 ## Files, functions, and classes/methods in directory "."
 
-**Date**: 2015-55-15 17:55:12.
+**Date**: 2015-56-15 17:56:41.
 
 ### File: ./docstring_page.py
 
@@ -14,8 +14,11 @@
  > Try to find class information in method.
  > 
  > Return tuple: 
+ > 
  >     (path, list of sublists:
+ > 
  >         [node-path-name, node-docstring]
+ > 
  >     )
 
  1. **path**: `./docstring_page.py.Page.format_markdown`

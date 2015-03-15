@@ -19,8 +19,11 @@ class Page():
         """Try to find class information in method.
         
         Return tuple: 
+        
             (path, list of sublists:
+        
                 [node-path-name, node-docstring]
+        
             )
         """
         self.file_sequence = []
