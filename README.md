@@ -13,4 +13,6 @@ By default, only files and functions/methods beginning with `test_` will be trea
     import docstring_page
     docstring_page.main(tests_only=False)
 
+This repository contains a sample file `list_of_functions.md` showing the output for this program itself.
+
 [end]
