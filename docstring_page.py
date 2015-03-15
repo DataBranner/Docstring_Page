@@ -128,7 +128,7 @@ class Page():
                          ast.get_docstring(func_def)]
                         )
     
-def main(argv, directory='.', tests_only=True):
+def main(argv=None, directory='.', tests_only=True):
     """List all docstrings in Python files in a directory.
     
     `tests_only=True` reports only 
@@ -141,8 +141,6 @@ def main(argv, directory='.', tests_only=True):
         'Output file will be saved to specified directory (here "tests").')
     if len(argv) > 1:
         directory = argv[1]
-    if len(argv) > 2:
-        tests_only = argv[2]
     p = Page(directory, tests_only)
     p.list_nodes_and_docstrings()
     md_content = p.format_markdown()
