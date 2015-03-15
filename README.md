@@ -2,6 +2,8 @@
 
 Python 3 program to prepare a Markdown page containing the names of all files, functions, classes, and methods and their Python docstrings. Such a page is suitable for immediate commital to a repository and display on GitHub.
 
+This is not intended to replace more elaborate documentation tools such as Sphinx, but to provide a quick way to summarize the contents of test suites for reporting purposes.
+
 Run as
 
     python docstring_page.py <directory>
