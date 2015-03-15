@@ -61,7 +61,7 @@ class Page():
                 if item[1]:
                     item[1] = re.sub(r'\n', r'\n > ', item[1])
                 numbered_items.append(
-                    ' 1. **path**: {}\n > {}'.format(item[0], item[1])
+                    ' 1. **path**: `{}`\n > {}'.format(item[0], item[1])
                     )
             numbered_items = '\n\n'.join(numbered_items)
             report_for_one_file = '\n\n'.join(
