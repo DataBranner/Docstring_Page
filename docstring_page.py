@@ -139,7 +139,7 @@ def main(argv=None, directory='.', tests_only=True):
     print('Run from top-level directory as\n\n'
         '    python docstring_page.py tests\n\n'
         'Output file will be saved to specified directory (here "tests").')
-    if len(argv) > 1:
+    if argv and len(argv) > 1:
         directory = argv[1]
     p = Page(directory, tests_only)
     p.list_nodes_and_docstrings()
