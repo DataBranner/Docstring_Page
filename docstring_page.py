@@ -45,7 +45,8 @@ class Page():
         Sub-lists contain a node name (incorporating path) and docstring.
         """
         # Make page-header.
-        current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        current_datetime = datetime.datetime.now().strftime(
+                '%Y-%m-%d %H:%M:%S_') + str(datetime.timezone.utc))
         page_header = (
                 '## Files, functions, and classes/methods in directory "{}"'
                 '\n\n**Date**: {}.'.
