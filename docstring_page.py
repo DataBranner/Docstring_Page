@@ -17,13 +17,13 @@ class Page():
 
     def list_nodes_and_docstrings(self):
         """Try to find class information in method.
-        
-        Return tuple: 
-        
+
+        Return tuple:
+
             (path, list of sublists:
-        
+
                 [node-path-name, node-docstring]
-        
+
             )
         """
         self.file_sequence = []
@@ -36,16 +36,16 @@ class Page():
                     self.contents = f.read()
                 self.gather_node_sequence()
                 self.file_sequence.append((self.path, self.node_sequence))
-    
+
     def format_markdown(self):
         """Format file_sequence as Markdown file.
-        
+
         Object file_sequence is list of tuples.
         Each tuple contains a path and a list of sub-lists.
         Sub-lists contain a node name (incorporating path) and docstring.
         """
         # Make page-header.
-        current_datetime = datetime.datetime.now().strftime('%Y-%M-%d %H:%M:%S')
+        current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         page_header = (
                 '## Files, functions, and classes/methods in directory "{}"'
                 '\n\n**Date**: {}.'.
@@ -84,7 +84,7 @@ class Page():
         report_for_all_files.append('\n\n[end]')
         # Concatenate page-items and return page.
         return '\n\n'.join(report_for_all_files)
-    
+
     def gather_node_sequence(self):
         """Parse file-contents and assign nodes to appropriate list."""
         self.module = ast.parse(self.contents)
@@ -95,11 +95,11 @@ class Page():
                 self.class_defs.append(node)
             if isinstance(node, ast.FunctionDef):
                 self.func_defs.append(node)
-        self.collect_docstrings()    
-    
+        self.collect_docstrings()
+
     def collect_docstrings(self):
         """Collect list of paths + classes + methods/functions, and docstrings.
-        
+
         This function assumes that there are no classes or methods/functions
         nested within others.
         """
@@ -130,12 +130,12 @@ class Page():
                         [self.path + '.' + func_def.name,
                          ast.get_docstring(func_def)]
                         )
-    
+
 def main(argv=None, directory='.', tests_only=True):
     """List all docstrings in Python files in a directory.
-    
-    `tests_only=True` reports only 
-    
+
+    `tests_only=True` reports only
+
      * functions/methods whose names begin `test_`
      * in files whose names begin `test_`
     """

@@ -1,6 +1,6 @@
 ## Files, functions, and classes/methods in directory "."
 
-**Date**: 2015-56-15 17:56:41.
+**Date**: 2015-04-27 17:46:22.
 
 ### File: ./docstring_page.py
 
@@ -13,7 +13,7 @@
  1. **path**: `./docstring_page.py.Page.list_nodes_and_docstrings`
  > Try to find class information in method.
  > 
- > Return tuple: 
+ > Return tuple:
  > 
  >     (path, list of sublists:
  > 
@@ -40,7 +40,7 @@
  1. **path**: `./docstring_page.py.main`
  > List all docstrings in Python files in a directory.
  > 
- > `tests_only=True` reports only 
+ > `tests_only=True` reports only
  > 
  >  * functions/methods whose names begin `test_`
  >  * in files whose names begin `test_`
